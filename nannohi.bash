@@ -18,8 +18,8 @@ curl -X POST ${INCOME_URL} \
   "icon_emoji": "robot",
   "attachments": [
     {
-      "title": "$(grep -ioP '(?<=<dt><span>).*(?=</span></dt>)' ${HTML_FILE})",
-      "text": "$(grep -ioP -m1 '(?<=<dd>).*(?=</dd>)' ${HTML_FILE})"
+      "title": "$(/opt/homebrew/bin/ggrep -ioP '(?<=<dt><span>).*(?=</span></dt>)' ${HTML_FILE})",
+      "text": "$(/opt/homebrew/bin/ggrep -ioP -m1 '(?<=<dd>).*(?=</dd>)' ${HTML_FILE})"
     }
   ]
 }

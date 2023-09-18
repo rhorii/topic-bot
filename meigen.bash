@@ -18,8 +18,8 @@ curl -X POST ${INCOME_URL} \
   "icon_emoji": "robot",
   "attachments": [
     {
-      "text": "$(grep -ioP '(?<=<meigen>).*(?=</meigen>)' ${XML_FILE})",
-      "footer": "$(grep -ioP '(?<=<auther>).*(?=</auther>)' ${XML_FILE})"
+      "text": "$(/opt/homebrew/bin/ggrep -ioP '(?<=<meigen>).*(?=</meigen>)' ${XML_FILE})",
+      "footer": "$(/opt/homebrew/bin/ggrep -ioP '(?<=<auther>).*(?=</auther>)' ${XML_FILE})"
     }
   ]
 }
